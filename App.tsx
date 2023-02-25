@@ -4,8 +4,13 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
+      <View style={styles.header}>
+        <Text>Home</Text>
+        <Text>Our story</Text>
+        <Text>Why Miss</Text>
+      </View>
+      <Text style={styles.title}>Miss Cupcake</Text>
     </View>
   );
 }
@@ -13,8 +18,19 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#f7c0e8',
+    justifyContent: 'flex-start',
+    paddingTop: 80,
+    paddingHorizontal: 16
   },
+  title: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    color: 'purple'
+  },
+  header: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 10
+  }
 });
